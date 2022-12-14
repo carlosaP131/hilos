@@ -40,7 +40,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Play.setBackground(new java.awt.Color(0, 0, 0));
-        Play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iPlay.png"))); // NOI18N
+        Play.setIcon(new javax.swing.ImageIcon("C:\\Users\\carlos\\Downloads\\hilos\\src\\img\\iPlay.png")); // NOI18N
         Play.setBorderPainted(false);
         Play.setContentAreaFilled(false);
         Play.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -51,7 +51,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jPanel1.add(Play, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         Pausa.setBackground(new java.awt.Color(255, 51, 51));
-        Pausa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iPausa.png"))); // NOI18N
+        Pausa.setIcon(new javax.swing.ImageIcon("C:\\Users\\carlos\\Downloads\\hilos\\src\\img\\iPausa.png")); // NOI18N
         Pausa.setBorderPainted(false);
         Pausa.setContentAreaFilled(false);
         Pausa.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -67,7 +67,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jLabel2.setText("PAUSE");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iFondoDerecha.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\carlos\\Downloads\\hilos\\src\\img\\iFondoDerecha.jpg")); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 70, 410));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_END);
@@ -75,7 +75,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 0, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iFondoAbajo.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\carlos\\Downloads\\hilos\\src\\img\\iFondoAbajo.jpg")); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_END);
@@ -84,11 +84,11 @@ public class PrincipalFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void PlayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlayMouseClicked
-      pg.play();
+      pg.setSrtStp(true);
     }//GEN-LAST:event_PlayMouseClicked
 
     private void PausaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PausaMouseClicked
-        pg.pausa();
+        pg.setSrtStp(false);
     }//GEN-LAST:event_PausaMouseClicked
 
     public static void main(String args[]) {
