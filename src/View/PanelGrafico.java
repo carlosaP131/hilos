@@ -50,7 +50,7 @@ public class PanelGrafico extends javax.swing.JPanel implements Runnable {
          * Cargar el fondo del panel
          */ 
         Dimension tamaño = this.getSize();
-        Fondo = new ImageIcon(getClass().getResource("C:\\Users\\carlos\\Downloads\\hilos\\src\\img\\iFondo.gif"));
+        Fondo = new ImageIcon(getClass().getResource("../img/iFondo.gif"));
         g.drawImage(Fondo.getImage(), 0, 0, tamaño.width, tamaño.height, null);
         setOpaque(false);
         super.paint(g);
@@ -63,13 +63,18 @@ public class PanelGrafico extends javax.swing.JPanel implements Runnable {
          */
         Graphics2D g2d2 = (Graphics2D) g;
         Toolkit t2 = Toolkit.getDefaultToolkit();
-        Image img2 = t2.getImage("C:\\Users\\carlos\\Downloads\\hilos\\src\\img\\iPelota1.png");//Cargar imagen pelota1
+        Image img2 = t2.getImage("src/img/iPelota1.png");//Cargar imagen pelota1
         Toolkit t = Toolkit.getDefaultToolkit();
-        Image img = t.getImage("C:\\Users\\carlos\\Downloads\\hilos\\src\\img\\iPelota2.png");//Cargar imagen pelota2
+        Image img = t.getImage("src/img/iPelota2.png");//Cargar imagen pelota2
         g2d.drawImage(img, x, y, this);
         g2d2.drawImage(img2, posx, posy, this);
         hilo = new Thread(this);
-        hilo.start();
+        if (srtStp) {
+            hilo.start();
+
+        } else {
+            hilo.interrupt();
+        }
         try {
 
             Thread.sleep(jSlider1.getValue());
